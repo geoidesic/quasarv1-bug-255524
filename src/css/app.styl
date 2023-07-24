@@ -1,0 +1,478 @@
+// app global css in Stylus form
+
+.xs-hide
+    display: none
+
+@media only screen and (min-width: 48em)
+  .xs-hide
+    display: block
+
+  .sm-hide
+    display: none
+
+@media only screen and (min-width: 64em)
+  .sm-hide
+    display: block
+
+  .md-hide
+    display: none
+
+@media only screen and (min-width: 75em)
+  .md-hide
+    display: block
+
+  .lg-hide
+    display: none
+
+.bg-tertiary
+  background-color: $tertiary
+
+.bg-quaternary
+  background-color: $quaternary
+
+.bg-quinternary
+  background-color: $quinternary
+
+.bg-accent
+  background-color: $accent
+
+.q-page-container
+  transition-duration: 2000
+
+.padding
+  padding: 0 2rem
+
+.q-layout-header.options
+  box-shadow: none
+  border-bottom: 1px solid $primary
+  padding: 0 1rem
+
+hr
+  &.margin
+    margin: 1rem 0 1rem 0
+
+h1
+  color: $primary
+  font-weight: bold
+  font-size: 2.2rem
+  font-family: 'Roboto Condensed', sans-serif
+  margin: 0
+
+  &.page-title
+    color: $accent
+    padding: 0 2rem
+    text-align: center
+
+  .q-btn, .q-btn-group
+    margin-left: 1rem
+    margin-top: 0
+  &.adder
+    position: relative
+
+h2
+  padding: 0
+  margin: 0
+  color: $accent
+  font-family: 'Roboto Condensed', sans-serif
+  font-size: 2rem
+  margin-bottom: 1rem
+  line-height: 2rem
+  position: relative
+
+  &:not(:first-of-type)
+    margin-top: 2rem
+
+  span
+    font-size: 1rem
+    font-weight: normal
+
+  .q-btn
+    &.add
+      position: absolute
+      right: 0
+      top: -0.3rem
+      background-color: $primary
+
+    &.remove
+      position: absolute
+      right: 0 // 1.3rem @todo: not sure what 1.3rem was for but 0 supports signatories and documents in appointments
+      top: 0 // 1rem @todo: not sure what 1rem was for but 0 supports signatories and documents in appointments
+  &.adder
+    position: relative
+h3
+  position: relative
+  padding: 0
+  margin: 1rem 0 1rem 0
+  color: $primary
+  font-family: 'Roboto Condensed', sans-serif
+  font-size: 1.5rem
+  line-height: 1.5rem
+
+  .q-btn
+    &.add
+      position: absolute
+      right: 0px
+      top: -0.3rem
+      background-color: $primary
+      color: white
+    &.remove
+      background-color: $primary
+      color: white
+      position: absolute
+      right: 0
+      top: 0
+  &.adder
+    position: relative
+h4
+  padding: 0
+  margin: 1rem 0 1rem 0
+  font-family: 'Roboto Condensed', sans-serif
+  font-size: 1rem
+  line-height: 1rem
+  letter-spacing: 1.2px
+  color: $secondary
+  opacity: 0.7
+  &.adder
+    position: relative
+.q-spinner
+  &.page-title
+    margin-left: 1rem
+
+.q-btn
+  &.add, &.remove
+    position: relative
+    font-size: 1.1rem
+    border-radius: 5px
+    cursor: pointer
+    padding: 0.4rem 0 0 0.2rem
+    border: 1px solid $tertiary
+    width: 2rem
+    height: 2rem
+
+    &:hover
+      background-color: $secondary
+      color: #fff
+      width: null
+
+    .q-icon
+      margin-top: -28px
+      margin-left: -8px
+
+.left
+  text-align: left
+
+.box
+  &.borderless
+    padding: 1rem 2rem
+
+  &.border
+    background: $tertiary
+    padding: 1rem
+    margin: 1rem 0 0 0
+
+    .inner
+      padding: 1rem
+      border-radius: $borderradius
+      border: 1px solid transparent
+
+      &.disabled-form
+        background: $disabled
+        .q-card
+          background: $disabled
+
+      &:not(.disabled-form)
+        background: white
+        .q-card
+          background: white
+
+.q-btn-group
+  margin: 0.5rem 0 0 0
+  border-radius: $borderradius
+
+  .q-btn
+    margin: 0
+    border-radius: $borderradius
+
+    &:not(:first-of-type)
+      border-left: 1px solid white
+
+#signature-pad
+  border-left: 1px solid grey
+  border-right: 1px solid grey
+  border-top: 1px solid grey
+
+.spacer
+  margin-bottom: 2rem
+
+.row.tall
+  margin-top: 0.5rem
+
+.q-alert
+  border-radius: $borderradius
+
+  &>.q-alert-side
+    .q-icon
+      font-size: 2.5rem
+
+  &>.q-btn
+    .q-icon
+      font-size: 2rem
+      min-height: 2rem
+
+.q-checkbox
+  margin-right: 1rem
+
+.sub
+  &:first-of-type
+    margin: 0.5rem 0 0 0
+
+  position: relative
+
+  > *:not(.q-icon)
+    // margin-left: 3rem
+
+  .q-icon
+    // position: absolute;
+    // top: 0px;
+    // left: -4px;
+    font-size: 2rem
+    font-weight: 300
+    color: #d3d3d3
+
+// - @experimental - larger datetime widgets. Remove `.exp` to enable
+.exp.q-time
+  font-size: 2rem
+  width: auto
+  height: auto
+  max-width: 200%
+
+  &__header-label
+    font-size: 3rem
+
+  &__clock
+    font-size: 2rem
+
+    &-position
+      font-size: 2rem
+      width: 2rem
+      height: 2rem
+
+  .q-btn
+    font-size: 2rem
+    border-radius: $borderradius
+    padding: 0 20px
+
+.exp.q-date
+  font-size: 2rem
+  width: auto
+  height: auto
+
+  &__header
+    height: 8rem !important
+
+    &-subtitle
+      font-size: 2rem
+      height: 3rem
+
+    &-title-label
+      font-size: 2rem
+
+  &__arrow
+    .q-icon
+      font-size: 2rem
+
+    .q-anchor--skip
+      min-height: 4rem
+
+  &__calendar
+    &-item
+      button
+        width: 4.3rem
+        height: 4.3rem
+
+    &-weekdays > div
+      font-size: 2rem
+      // margin-left: -4px
+
+  .q-btn
+    font-size: 2rem
+    border-radius: $borderradius
+    padding: 0 20px
+
+.datetime
+  // fix double undersline on datetime q-field
+  >.q-field__inner
+    >.q-field__control
+      &:after
+        transform: scale3d(0, 1, 1)
+
+      &:before
+        border: 0
+
+  &.q-field--auto-height.q-field--labeled .q-field__control-container
+    // deal with issues around stack-label for datetime input
+    padding-top: 0
+
+  .q-field__label
+    padding-bottom: 50px
+
+.q-field--labeled .q-field__native, .q-field--labeled .q-field__prefix, .q-field--labeled .q-field__suffix
+  // ensures that option groups in left col lines up with value in right col without disturbing the layout of placeholders for input quasar.styl:2333
+  line-height: 24px
+  padding-top: 24px
+  padding-bottom: 0px
+
+.q-field
+  flex: auto
+
+  &.thin
+    .q-field__control-container
+      padding-top: 16px
+
+  &__control
+    .q-option-group
+      .q-radio
+        &__inner
+          & + div.q-radio__label
+            color: #000
+
+        &__inner--active + div.q-radio__label
+          color: $primary
+
+  &.small
+    .q-field-label-inner
+      font-size: 0.75rem
+
+.q-stepper
+  box-shadow: none
+  border: none
+  margin: 0
+  padding: 0
+  &__tab--done
+    color: $positive
+  
+  .q-stepper-nav, .q-stepper-tab
+    flex: 1
+
+    &.step-active
+      .q-stepper-dot
+        background: $primary
+
+        span
+          color: white
+
+    &:not(.step-active)
+      .q-stepper-dot
+        color: $primary
+        background: white
+
+  .q-stepper-dot
+    border: 2px solid $primary
+
+    span
+      color: $primary
+
+.q-stepper-horizontal > .q-stepper-step > .q-stepper-step-content > .q-stepper-step-inner
+  padding: 0
+
+.q-stepper-horizontal > .q-stepper-header .q-stepper-line:before, .q-stepper-horizontal > .q-stepper-header .q-stepper-line:after
+  position: absolute
+  top: 50%
+  height: 2px
+  width: 100vw
+  background: $primary
+
+.q-select
+  &.sub
+    margin-left: 0px
+
+.q-if-label-spacer
+  white-space: normal
+
+.q-card
+  padding: 1rem
+  margin: 0 0 1rem 0
+  position: relative
+  border: 1px solid #ddd
+  box-shadow: 0 2px 10px 3px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12)
+
+  &.country
+    padding: 1rem
+    margin-bottom: 1rem
+
+  >button.q-btn.add, >button.q-btn.remove
+    position: absolute
+    top: 1rem
+    right: 1rem
+    cursor: pointer
+
+textarea
+  &.wide
+    width: 100%
+    min-height: 5rem
+    border-top-left-radius: 5px
+    border-top-right-radius: 5px
+    border-bottom-left-radius: 5px
+    border: 1px solid #ccc
+    box-sizing: border-box
+
+.body--dark
+  .box.border
+    background: $primary
+
+    .inner
+      background: $dark
+
+      &.disabled-form
+        background: $dark-disabled
+        .q-card
+          background:  $dark-disabled
+
+      &:not(.disabled-form)
+        background: $dark
+        .q-card
+          background: $dark
+
+
+  .q-field__control .q-option-group .q-radio__inner + div.q-radio__label
+    color: white
+
+  .q-list--dark
+    .q-item
+      &.current
+        background-color: white
+      &--active
+        .q-item__label--caption
+          color: black
+
+
+
+strong
+  &.secondary
+    color: $secondary
+
+// fix double underlines
+.person-input
+  >.q-field--standard
+    >.q-field__inner
+      >.q-field__control
+        &:after
+          transform: scale3d(0, 1, 1)
+
+        &:before
+          border: 0
+
+        >.q-field__control-container
+          >.col-xs-12
+            >.q-field--standard
+              >.q-field
+                &__inner
+                  >.q-field__control
+                    &:after
+                      transform: scale3d(0, 1, 1)
+
+                    &:before
+                      border: 0
+label
+  font-size: 0.75rem
+  color: rgba(255,255,255,0.7)

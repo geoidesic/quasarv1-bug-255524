@@ -1,0 +1,19 @@
+{
+    "vetur.format.defaultFormatter.js": "prettier-eslint", // vetur will respect .eslintignore and .eslintrc.js
+    "vetur.format.defaultFormatter.html": "prettyhtml", // prettyhtml is a superset to prettier, which is more legible
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features" // sets the default formatter for JSON with Comments files
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features" // sets the default formatter for JSON files
+    },
+    "[vue]": {
+        "editor.defaultFormatter": "octref.vetur" // sets vetur as the default formatter for vue files
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode" // sets prettier as the default formatter for JavaScript files
+    },
+    "xhtml2pug.encode": false,
+    "xhtml2pug.doubleQuotes": false,
+    "xhtml2pug.commas": false
+}

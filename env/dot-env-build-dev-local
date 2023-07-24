@@ -1,0 +1,4 @@
+SRV=https://be.test.localhost
+LCL=https://fe.test.localhost
+
+WIP=true
